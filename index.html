@@ -8,7 +8,29 @@
     <title>javascript - advice generator app</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div class="container" v-cloak>
+      <div class="card">
+          <div class="card-heading">
+              <p>Advice {{ adviceNumber }}</p>
+          </div>
+          <div class="card-text">
+              <p>{{ advice }}</p>
+          </div>
+
+          <div class="icon-divide">
+              <img v-bind:src="dividerImg" alt="" />
+          </div>
+
+          <div class="dice-icon-container" @click="generateQuote">
+              <img
+                  src="/assets/icon-dice.svg"
+                  alt=""
+                  class="dice-img"
+                  :style="{ transform: 'rotate(' + turn + 'deg)' }"
+              />
+          </div>
+      </div>
+  </div>
     <script type="module" src="./src/main.js"></script>
   </body>
 </html>
