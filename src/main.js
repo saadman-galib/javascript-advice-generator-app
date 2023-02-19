@@ -15,7 +15,7 @@ if (window.innerWidth <= 580) {
 }
 
 function generateQuote() {
-    fetch("https://api.adviceslip.com/advice")
+    fetch("https://api.adviceslip.com/advice", {cache: "no-cache"})
         .then((res) => res.json())
         .then((data) => {
             adviceNumber.innerHTML = `ADVICE # ${data.slip.id}`;
