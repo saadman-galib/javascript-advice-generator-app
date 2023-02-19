@@ -55,7 +55,6 @@ body {
 .card .dice-icon-container {
     position: absolute;
     bottom: 0;
-    /* transform: translate(-50%, 50%); */
     transform: translateY(50%);
     width: 35px;
     height: 35px;
@@ -69,21 +68,18 @@ body {
     transition: 0.5s;
 }
 
+.card .dice-icon-container img {
+    transition: 2s;
+}
+
 .card .dice-icon-container:hover {
     box-shadow: 0px 0px 40px hsl(150, 100%, 66%);
 }
 
-.card .dice-icon-container:hover img {
-    transition: 2s;
-}
-
 @media (max-width: 580px) {
     body {
-        /* max-height: 100%; */
-        /* padding: 40px; */
         width: 100%;
         height: auto;
-        /* margin: auto; */
         padding: auto;
     }
     .container {
@@ -92,9 +88,8 @@ body {
         width: 100%;
     }
     .card {
-        /* min-width: 250px; */
         max-width: 450px;
-        margin-left: auto;
+        margin: auto;
     }
 }
 

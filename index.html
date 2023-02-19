@@ -1,36 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/style.css">
-    <title>javascript - advice generator app</title>
-  </head>
-  <body>
-    <div class="container" v-cloak>
-      <div class="card">
-          <div class="card-heading">
-              <p>Advice {{ adviceNumber }}</p>
-          </div>
-          <div class="card-text">
-              <p>{{ advice }}</p>
-          </div>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./src/style.css" />
+        <title>javascript - advice generator app</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="card">
+                <div class="card-heading">
+                    <p></p>
+                </div>
+                <div class="card-text">
+                    <p></p>
+                </div>
 
-          <div class="icon-divide">
-              <img v-bind:src="dividerImg" alt="" />
-          </div>
+                <div class="icon-divide">
+                    <img src="/assets/pattern-divider-desktop.svg" alt="" />
+                </div>
 
-          <div class="dice-icon-container" @click="generateQuote">
-              <img
-                  src="/assets/icon-dice.svg"
-                  alt=""
-                  class="dice-img"
-                  :style="{ transform: 'rotate(' + turn + 'deg)' }"
-              />
-          </div>
-      </div>
-  </div>
-    <script type="module" src="./src/main.js"></script>
-  </body>
+                <div class="dice-icon-container">
+                    <img src="/assets/icon-dice.svg" alt="" class="dice-img" />
+                </div>
+            </div>
+        </div>
+        <script type="module" src="./src/main.js"></script>
+    </body>
 </html>
